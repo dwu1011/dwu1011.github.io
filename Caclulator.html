@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <title>Calculator v1.0.0</title>
+        <style type="text/CSS">
+            .container{
+                background-color: gray;
+                height:100%;
+                width: 100%;
+            }
+            #Title{
+                width:100%;
+                display: flex;
+                justify-content: center;
+                font-size:7ex;
+                margin:0px;
+            }
+            #Output{
+                background-color:white;
+                width:100%;
+                display:flex;
+                height:10%;
+                border:1px solid black;
+                font-size:10ex;
+            }
+            #TypingGrid{
+                display:grid;
+                font-size:10vh;
+                grid-template-columns: 4fr 4fr 4fr 5fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr;
+                border: 1px solid black;
+                background-color:white;
+                flex-basis:100vh;
+                height: 75%;
+                position:relative;
+            }
+            .buttons{
+                display:flex;
+                border:1px solid black;
+                justify-content: center;
+                align-items: center;
+            }
+            .buttons:hover{
+                background-color: gray;
+            }
+        </style>
+    </head>
+    <body>
+        <div class = 'container'>
+            <h1 id = 'Title'>Calculator</h1>
+            <div id = 'Output1'><span id='Output'></span></div>
+            <div id = 'TypingGrid'>
+                <div class = 'buttons' id = '1'>1</div>
+                <div class = 'buttons' id = '2'>2</div>
+                <div class = 'buttons' id = '3'>3</div>
+                <div class = 'buttons' id = '+'>+</div>
+                <div class = 'buttons' id = '4'>4</div>
+                <div class = 'buttons' id = '5'>5</div>
+                <div class = 'buttons' id = '6'>6</div>
+                <div class = 'buttons' id = '-'>-</div>
+                <div class = 'buttons' id = '7'>7</div>
+                <div class = 'buttons' id = '8'>8</div>
+                <div class = 'buttons' id = '9'>9</div>
+                <div class = 'buttons' id = '*'>*</div>
+                <div class = 'buttons' id = '±'>±</div>
+                <div class = 'buttons' id = '0'>0</div>
+                <div class = 'buttons' id = '.'>.</div>
+                <div class = 'buttons' id = 'Enter'>Enter</div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            let Output = document.getElementById('Output');
+            let calculator = {
+                spots:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+                numPressed:[],
+                num1: 0,
+                num1: 0,
+                Output:0
+            }
+                
+            function init() {
+                let buttons = document.getElementsByClassName('buttons');
+                for(let i = 0; i < calculator.spots.length; i++){
+                    buttons[i].addEventListener('mouseup', buttonPressed);
+                }
+                Output.addEventListener('mouseup', buttonPressed);
+                
+            }
+            function buttonPressed(evt){
+                let spot = evt.target.id;
+                if(spot == 'Output'){
+                    for(i = 0; i < calculator.numPressed.length; i++){
+                        calculator.numPressed.splice(i);
+                    }
+                    Output.innerHTML = '';
+                }
+                else{
+                    calculator.numPressed[calculator.numPressed.length] = spot;
+                    Output.innerHTML = calculator.numPressed.join('');                    
+                }
+                
+            }
+            window.onload = init;
+        </script>
+    </body>
+</html>
