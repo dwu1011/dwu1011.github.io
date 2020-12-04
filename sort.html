@@ -12,16 +12,16 @@
             }
             function random(){
                 inputArray.splice(0,inputArray.length);
-                for(var i = 0; i< 14; i++){
+                for(var i = 0; i< 70; i++){
                     inputArray.push(getRndInteger(10,400));
                 }
-                draw();
+                drawB(0);
             }
-            function draw(){
-                var canvas = document.getElementById("myCanvas");
+            function drawB(a){
+                var canvas = document.getElementById("myCanvas1");
                 var ctx = canvas.getContext("2d");
 
-                var width = 40;
+                var width = 10;
                 var x = 5;
 
                 ctx.fillStyle = '#008080';
@@ -29,19 +29,27 @@
                 for (var i =0; i < inputArray.length; i++){
 
                     var h = inputArray[i];
+                    if(i == a){
+                        ctx.fillStyle = '#000000';
+                    }
                     ctx.fillRect(x,canvas.height-h,width,h);
-                    x += width + 10;
+                    x += width;
+                    ctx.fillStyle = '#008080'
                 }
 
             }
 
+
             function reset(){
-                var canvas = document.getElementById('myCanvas');
+                var canvas = document.getElementById('myCanvas1');
+                var ctx = canvas.getContext('2d');
+                ctx.clearRect(0,0,canvas.width,canvas.height);
+                var canvas = document.getElementById('myCanvas2');
                 var ctx = canvas.getContext('2d');
                 ctx.clearRect(0,0,canvas.width,canvas.height);
             }
 
-            async function sort(){
+            async function Bubblesort(){
                 let len = inputArray.length;
                 let swapped;
                 do {
@@ -53,9 +61,9 @@
                             inputArray[i+1] = tmp;
                             swapped=true;
                             reset();
-                            draw();
+                            drawB(i);
                             console.log("sleeping for a second");
-                            await sleep(500);
+                            await sleep(10);
                         }
                     }
                 }while(swapped);
@@ -63,12 +71,13 @@
         </script>
     </head>
     <body alight = "center">
+
         <input type="button" value = "random" name = "randomize" onclick="random()">
-        <input type="button" value = "sort" name = "sort" onclick="sort()">
+        <input type="button" value = "sort" name = "sort" onclick="Bubblesort()">
         <input type="button" value = "clear" name = "clear" onclick = "reset()"><br> <br>
-
-
-        <canvas id="myCanvas" height="400" width="700" style="border:1px solid #c3c3c3;"></canvas>
-        
+        <div>BUBBLE SORT</div>
+        <canvas id="myCanvas1" height="400" width="700" style="border:1px solid #c3c3c3;"></canvas>
+        <div>SELECTION SORT</div>
+        <canvas id="myCanvas2" height="400" width="700" style="border:1px solid #c3c3c3;"></canvas>
     </body>
 </html>
