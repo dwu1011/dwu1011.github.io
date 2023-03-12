@@ -1,26 +1,34 @@
+html{
+    scroll-behavior:smooth;
+}
 body{
     width:100%;
     height:100%;
     margin: 0% 0% 0% 0%;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x:hidden;
 }
 .container{
     height:100vh;
+    width:100vw;
 }
 .navbar{
     z-index:1;
     position:fixed;
     width:100%;
     top:0;
-    background-color:0,0,0,0;
+    transition: background 0.5s ease;
+    background-color:(0,0,0,0);
 
     display:flex;
     justify-content:flex-end;
 }
 .navbar a{
     width:60px;
-    padding:1.5em;
+    padding:1.75em;
+    padding-left:3em;
+    padding-right:3em;
     text-align:center;
-    font-size: 1.2em;
     text-decoration:none;
     color:white;
 }
@@ -35,15 +43,18 @@ body{
     background-image:url('../images/IMG_1334 (1).jpg');
     background-repeat: no-repeat;
     background-size:cover;
-    opacity:0.96;
+    background-position-y: 25%;
     
     font-size:50px;
-    padding-left:14.3em;
 }
 
 .intro h1{
     margin:0% 0% 0% 0%;
 }
+.headtext{
+    transform:translate(50%, 100%);
+}
+
 .scroller {
     height: 1.2em;
     line-height: 1.2em;
@@ -57,6 +68,7 @@ body{
     animation: slide 5s;
     font-weight: bold;
 }
+
 @keyframes slide {
     0% {top: -1.2em;}
     12% {top: -2.4em;}
@@ -66,6 +78,7 @@ body{
     29% {top: -7.2em;}
     /* 100% {top: 0em;} */
 }
-.showcase{
-    height:50vh;
+#showcase{
+    height:100vh;
 }
+
