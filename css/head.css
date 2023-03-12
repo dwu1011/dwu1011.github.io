@@ -30,10 +30,10 @@ body{
     padding-right:3em;
     text-align:center;
     text-decoration:none;
-    color:white;
+    color:black;
 }
 .navbar a:hover{
-    background-color:black;
+    background-color:white;
 }
 
 .intro{
@@ -65,20 +65,21 @@ body{
 .scroller>span {
     position: absolute;
     top: 0;
-    animation: slide 5s;
+    animation: slide 6s infinite;
     font-weight: bold;
 }
 
 @keyframes slide {
-    0% {top: -1.2em;}
+    5% {top: -1.2em;}
     12% {top: -2.4em;}
     17% {top: -3.6em;}
     22% {top: -4.8em;}
     27% {top: -6.0em;}
     29% {top: -7.2em;}
-    /* 100% {top: 0em;} */
+    100% {top: 0em;}
 }
 #showcase{
+    background-color: rgb(238, 230, 211);
     height:100vh;
 }
 
