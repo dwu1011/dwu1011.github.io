@@ -21,7 +21,7 @@
 .photo-left{
     width:65%;
     height:100%;
-    background-image: url('/sciowebsite/images/left.png');
+    background-image: url('/images/left.png');
     background-size:cover;
     background-repeat:no-repeat;
     background-position:65%;
@@ -55,7 +55,7 @@
 .photo-right{
     height:100%;
     width:100%;
-    background-image: url('/sciowebsite/images/right.png');
+    background-image: url('/images/right.png');
     background-size:cover;
     background-position:65%;
     position:relative;
@@ -70,7 +70,7 @@
 .photo-bot{
     width:50%;
     height:100%;
-    background-image: url('/sciowebsite/images/botrl.png');
+    background-image: url('/images/botrl.png');
     background-size:cover;
     position:relative;
 }
@@ -113,7 +113,7 @@
     height:100%;
     width:100%;
 
-    background-image:url('/sciowebsite/images/botrr.png');
+    background-image:url('/images/botrr.png');
     background-size:cover;
     z-index:-2;
     position:absolute;
