@@ -1,0 +1,127 @@
+.photo-gallery{
+    height:85vh;
+    background-color:#3c613b;
+    width:100%
+}
+
+.photo-gallery h1{
+    width: 90%;
+    height: 77px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+
+    line-height: 77px;
+    color: rgb(229, 229, 229);
+
+    transform: translate(5vw, 3vh);
+}
+
+.photo-left{
+    width:65%;
+    height:100%;
+    background-image: url('/images/left.png');
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:65%;
+
+    display:flex;
+    position:relative;
+}
+
+.photo{
+    text-decoration:none;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.photo-gallery-layout{
+    width:65%;
+    height:75%;
+    display:flex;
+
+    transform: translate(17.5vw, 5vh);
+}
+
+.photo-gallery-right{
+    display:flex;
+    flex-direction:column;
+    width:35%;
+    height:100%;   
+}
+
+.photo-right{
+    height:100%;
+    width:100%;
+    background-image: url('/images/right.png');
+    background-size:cover;
+    background-position:65%;
+    position:relative;
+}
+
+.photo-gallery-bottom-right{
+    display:flex;
+    width:100%;
+    height:35%;
+}
+
+.photo-bot{
+    width:50%;
+    height:100%;
+    background-image: url('/images/botrl.png');
+    background-size:cover;
+    position:relative;
+}
+
+.more-photo{
+    width:50%;
+    height:100%;
+    
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    
+    
+    position:relative;
+}
+.more-photo p{
+    filter: none;
+    color:white;
+    text-decoration:none;
+}
+
+.photo{
+    text-decoration:none;
+    color:transparent;
+    display:flex;
+    flex-direction:column;
+    z-index:10;
+}
+
+.blur{
+    width:100%;
+    height:100%;
+    background-color:grey;
+    opacity:0.75;
+    z-index:-1;
+    position:absolute;
+}
+
+.more-blur{
+    height:100%;
+    width:100%;
+
+    background-image:url('/images/botrr.png');
+    background-size:cover;
+    z-index:-2;
+    position:absolute;
+
+    filter:blur(2px);
+}
+
+
+.more-text{
+    z-index:10;
+}

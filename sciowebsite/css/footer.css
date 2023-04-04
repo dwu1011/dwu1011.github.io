@@ -1,0 +1,31 @@
+footer{
+    height:20vh;
+    width:100%;
+    
+    display:flex;
+    justify-content:space-around;
+}
+
+.footer-links{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:3vh;
+}
+
+.contact{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    gap:2vh;
+}
+
+.contact h3{
+    font-weight:normal;
+}
+
+.copyright{
+    font-size:10px;
+    text-align:center;
+}
