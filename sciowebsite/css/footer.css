@@ -1,5 +1,5 @@
 footer{
-    height:20vh;
+    height:15vh;
     width:100%;
     
     display:flex;
@@ -10,7 +10,12 @@ footer{
     display:flex;
     flex-direction:column;
     justify-content:center;
-    gap:3vh;
+    gap:2vh;
+}
+
+.footer-links a{
+    text-decoration:none;
+    color:black;
 }
 
 .contact{
@@ -18,11 +23,14 @@ footer{
     flex-direction:column;
     justify-content:center;
 
-    gap:2vh;
+    gap:1vh;
 }
 
-.contact h3{
+.contact h3,a{
+    font-size:16px;
     font-weight:normal;
+    text-decoration:none;
+    color:black;
 }
 
 .copyright{

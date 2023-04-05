@@ -1,5 +1,5 @@
 .photo-gallery{
-    height:85vh;
+    height:840px;
     background-color:#3c613b;
     width:100%
 }
@@ -107,6 +107,7 @@
     opacity:0.75;
     z-index:-1;
     position:absolute;
+    filter:blur(2px);
 }
 
 .more-blur{
