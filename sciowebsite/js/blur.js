@@ -24,3 +24,8 @@ photos.forEach((photo) => {
     photo.addEventListener('mouseenter', function(){addblur(photo)});
     photo.addEventListener('mouseleave', function(){removeblur(photo)});
 });
+
+window.addEventListener('scroll', () => {
+    document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+}, false);
+  
